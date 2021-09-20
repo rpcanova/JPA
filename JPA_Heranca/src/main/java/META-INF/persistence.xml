@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="JPA_Heranca">
+		<class>com.eclipselink.entity.Veiculo</class>
+		<class>com.eclipselink.entity.Aereo</class>
+		<class>com.eclipselink.entity.Aquatico</class>
+		<class>com.eclipselink.entity.Terrestre</class>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:sqlite:c:/Bancos de Dados/SQLite 3/jpadb_heranca.db"></property>
+			<property name="javax.persistence.jdbc.driver"
+				value="org.sqlite.JDBC" />
+			<property name="eclipselink.logging.level" value="FINE" />
+			<property name="eclipselink.ddl-generation"
+				value="create-tables" />
+		</properties>
+	</persistence-unit>
+</persistence>
